@@ -1,31 +1,27 @@
-import styled from "styled-components";
-import GlobalStyles from "./styles/GlobalStyles";
-import Button from "./ui/Button";
-import Input from "./ui/Input";
-
-const H1 = styled.h1`
-  font-size: 30px;
-  font-weight: 600;
-  background-color: yellow;
-`;
-
-const StyledApp = styled.main`
-  background-color: orangered;
-  padding: 20px;
-`;
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Bookings from "./pages/Bookings";
+import Cabins from "./pages/Cabins";
+import Users from "./pages/Users";
+import Settings from "./pages/Settings";
+import Account from "./pages/Account";
+import Login from "./pages/Login";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    <>
-      <GlobalStyles />
-      <StyledApp>
-        <H1>GuestFlow Oasis</H1>
-        <Button onClick={() => alert("Check in")}>Check in</Button>
-        <Button onClick={() => alert("Check out")}>Check out</Button>
-        <Input type="number" placeholder="Number of guests"></Input>
-        <Input type="number" placeholder="Number of guests"></Input>
-      </StyledApp>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="bookings" element={<Bookings />} />
+        <Route path="cabins" element={<Cabins />} />
+        <Route path="users" element={<Users />} />
+        <Route path="settings" element={<Settings />} />
+        <Route path="account" element={<Account />} />
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
