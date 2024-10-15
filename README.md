@@ -22,6 +22,7 @@
 
 ### Additional Tools
 
+- **CRUD**: Learnt to create, read, update and delete the cabins using custom hooks, react query and react hook form.
 - **React Icons**: For easy and consistent icon usage across the app.
 - **React Hot Toast**: Used for displaying beautiful, non-intrusive notifications.
 - **Recharts**: A charting library for visualizing data within the app.
