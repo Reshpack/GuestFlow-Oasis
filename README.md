@@ -28,3 +28,4 @@
 - **Recharts**: A charting library for visualizing data within the app.
 - **date-fns**: A lightweight library for handling date manipulation and formatting.
 - **Supabase**: Backend services for authentication, real-time data, and database management.
+  = **React Portal**
